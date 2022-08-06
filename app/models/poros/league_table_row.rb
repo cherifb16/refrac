@@ -4,12 +4,9 @@ module Poros
     attr_accessor :club, :rank, :year, :matches
     def initialize(club, year)
       @club = club
-      @year = year
-      @rank = nil
+      
       @matches = club.matches_on(year)
     end
-
-
       def digested_games_count
         matches.where(kicked_off_at: Date.new(year, 1, 1)...Time.current).count
       end
