@@ -47,7 +47,7 @@ class Club < ApplicationRecord
   private
   def count_result_on(year, kind)
     year = Date.new(year, 1, 1)
-    matches_on_specified_year = matches.where(kicked off_at :year.all_year)
+    matches_on_specified_year = matches.where(kicked_off_at: year.all_year)
     
     count = 0
     
