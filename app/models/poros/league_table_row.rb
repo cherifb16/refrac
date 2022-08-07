@@ -1,11 +1,12 @@
 # This class is for representing one row in the league table.
 module Poros
   class LeagueTableRow
-    attr_accessor :club, :rank, :year, :matches, :digested_games_count, :win, :lost, :draw, :goals, :goals_conceded, :goal_difference, :points
-
+    attr_accessor :club, :rank, :year, :matches
+    
     def initialize(club, year)
       @club = club
-
+      @year = year
+      @rank = nil
       @matches = club.matches_on(year)
     end
 
