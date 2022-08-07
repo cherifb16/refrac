@@ -5,8 +5,7 @@ module Poros
     
     def initialize(club, year)
       @club = club
-      @year = year
-      @rank = nil
+   
       @matches = club.matches_on(year)
     end
 
